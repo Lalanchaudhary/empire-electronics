@@ -227,28 +227,25 @@ h3 {
 }
 
 .hero-visual {
-  align-self: stretch;
-  display: grid;
-  min-height: 420px;
-  place-items: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-visual-link {
   display: block;
-  width: min(780px, 100%);
-  border-radius: 8px;
-}
-
-.hero-visual-link:focus-visible {
-  outline: 3px solid var(--teal-dark);
-  outline-offset: 6px;
+  width: 100%;
+  max-width: 420px;   /* Pehle 780px tha */
 }
 
 .hero-visual-link img {
-  width: min(780px, 100%);
+  width: 100%;
+  max-width: 420px;
+  max-height: 78vh;   /* Screen se bahar nahi jayegi */
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 26px 38px rgba(11, 52, 48, 0.18));
+  filter: drop-shadow(0 20px 30px rgba(11, 52, 48, 0.18));
 }
 
 .section {
@@ -537,7 +534,7 @@ textarea {
 
   .hero-visual img {
     width: 100%;
-    max-height: none;
+    max-height: 75vh;
   }
 
   .hero-stats,
