@@ -17,6 +17,25 @@
 
   gtag('config', 'AW-18326048470');
 </script>
+<!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18326048470/0CEeCILUjNEcENadxaJE',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 
 <body>
@@ -51,8 +70,8 @@
           <a class="button primary" href="#products">Shop Categories</a>
           <a class="button secondary" href="#contact">Visit Store</a>
           <a class="button whatsapp"
-            href="https://wa.me/917856865588?text=I%20want%20to%20know%20more"
-            onclick="return gtag_report_conversion('https://wa.me/917856865588?text=I%20want%20to%20know%20more');">
+            href="https://wa.me/918920474870?text=I%20want%20to%20know%20more"
+            onclick="return gtag_report_conversion('https://wa.me/918920474870?text=I%20want%20to%20know%20more');">
             WhatsApp Us
           </a>
         </div>
@@ -73,9 +92,9 @@
       </div>
       <div class="hero-visual" aria-label="Electronics products display">
         <a class="hero-visual-link"
-          href="https://wa.me/917856865588?text=I%20want%20to%20know%20more"
+          href="https://wa.me/918920474870?text=I%20want%20to%20know%20more"
           aria-label="Chat with EMPIRE Electronics on WhatsApp"
-          onclick="return gtag_report_conversion('https://wa.me/917856865588?text=I%20want%20to%20know%20more');">
+          onclick="return gtag_report_conversion('https://wa.me/918920474870?text=I%20want%20to%20know%20more');">
           <img src="empire.png" alt="EMPIRE Electronics offer" />
         </a>
       </div>
